@@ -449,10 +449,10 @@ public class Polynomial extends ArrayList<Integer> {
     // e.g. {0, -11, 0, 0, 0, 0}               => 1     (-11x)
     // e.g. {-10, 0, 0, 0, 0, 0}               => 0     (0)
        /* @@@ STUB! */
-      for (int i=0;i<degreeOfPolynomialCoeffsLowToHig;i++)
+      for (int i=0;i<degreeOfPolynomialCoeffsLowToHigh;i++)
 	  {
 
-	      this.add(i,degreeOfPolynomialCoeffsLowToHig[i]);
+	      this.add(i,degreeOfPolynomialCoeffsLowToHigh[i]);
 	  }
 
 
