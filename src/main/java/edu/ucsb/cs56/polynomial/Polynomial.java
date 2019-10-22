@@ -570,9 +570,9 @@ public class Polynomial extends ArrayList<Integer> {
 Polynomial a = this;
 int N = Math.max(a.getDegree(), p.getDegree());
         Polynomial c = new Polynomial(0, N);  
-        for (int i = 0; i <= a.getDegree(); i++) c.coeffsHighToLow[i] += a.coeffsHighToLow[i];
-        for (int i = 0; i <= p.getDegree(); i++) c.coeffsHighToLow[i] += p.coeffsHighToLow[i];
-        for (int i = 0; i <= N; i++) if (c.coeffsHighToLow[i] != 0) c.getDegree() = i;
+        for (int i = 0; i <= a.getDegree(); i++) c.HighToLow[i] += a.highToLow[i];
+        for (int i = 0; i <= p.getDegree(); i++) c.highToLow[i] += p.highToLow[i];
+        for (int i = 0; i <= N; i++) if (c.highToLow[i] != 0) c.getDegree() = i;
         return c;
     }
 
