@@ -459,7 +459,7 @@ public class Polynomial extends ArrayList<Integer> {
 
       */
 
-
+      return 0;
       
   }
 
