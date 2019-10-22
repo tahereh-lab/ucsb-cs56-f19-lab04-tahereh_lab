@@ -26,8 +26,8 @@ public class PolynomialTest
      @see Polynomial#Polynomial()
 
    */
-    /*
-public Polynomial plus(Polynomial P) {
+
+    /*public Polynomial plus(Polynomial P) {
     Polynomial poly = new Polynomial(0, Math.max(this.degree, P.degree));
         for (int i = 0; i <= this.degree; i++) poly.coef[i] += this.coef[i];
         for (int i = 0; i <= P.degree; i++) poly.coef[i] += P.coef[i];
@@ -36,6 +36,8 @@ public Polynomial plus(Polynomial P) {
     
 
 	}*/
+
+    
 
 
 

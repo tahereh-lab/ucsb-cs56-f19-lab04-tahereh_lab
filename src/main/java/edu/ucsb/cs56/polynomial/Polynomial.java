@@ -41,7 +41,7 @@ public class Polynomial extends ArrayList<Integer> {
    */
 
   public int getDegree() {
-    return 2 ; // STUB
+    return 0 ; // STUB
   }
 
   /**
@@ -448,7 +448,19 @@ public class Polynomial extends ArrayList<Integer> {
     // e.g. {0, -11, -12, 0, 0, 0}             => 2     (-12x^2 - 11x) 
     // e.g. {0, -11, 0, 0, 0, 0}               => 1     (-11x)
     // e.g. {-10, 0, 0, 0, 0, 0}               => 0     (0)
-      return 0; /* @@@ STUB! */
+       /* @@@ STUB! */
+      for (int i=0;i<degreedegreeOfPolynomialCoeffsLowToHigh,i++)
+	  {
+
+	      this.add(i,degreeOfPolynomialCoeffsLowToHigh[i]);
+	  }
+
+
+
+
+
+
+      
   }
 
 
