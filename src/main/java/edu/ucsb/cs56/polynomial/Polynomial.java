@@ -41,7 +41,10 @@ public class Polynomial extends ArrayList<Integer> {
    */
 
   public int getDegree() {
-    return 0 ; // STUB
+
+
+      return this.size() - 1;
+    // STUB
   }
 
   /**
@@ -565,11 +568,11 @@ public class Polynomial extends ArrayList<Integer> {
   public Polynomial plus (Polynomial p) {
 
 Polynomial a = this;
-        int N = Math.max(a.degree, p.degree);
+int N = Math.max(a.detDegree(), p.getDegree());
         Polynomial c = new Polynomial(0, N);  
-        for (int i = 0; i <= a.degree; i++) c.coef[i] += a.coef[i];
-        for (int i = 0; i <= p.degree; i++) c.coef[i] += p.coef[i];
-        for (int i = 0; i <= N; i++) if (c.coef[i] != 0) c.degree = i;
+        for (int i = 0; i <= a.getDegree(); i++) c.coef[i] += a.coef[i];
+        for (int i = 0; i <= p.getDegree(); i++) c.coef[i] += p.coef[i];
+        for (int i = 0; i <= N; i++) if (c.coef[i] != 0) c.getDegree() = i;
         return c;
     }
 
