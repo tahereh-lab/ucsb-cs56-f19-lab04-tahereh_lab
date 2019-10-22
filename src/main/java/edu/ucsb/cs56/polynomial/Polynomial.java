@@ -491,7 +491,7 @@ public class Polynomial extends ArrayList<Integer> {
   @return index of the highest degree non-zero term (if any, otherwise {@code 0})
   */
 
-  public static int degreeOfPolynomialCoeffsHighToLow(int [] coeffsHighToLow) {
+                                                                       public static int degreeOfPolynomialCoeffsHighToLow(int [] coeffsHighToLow) {
 
     // e.g. {0, 0, 0, 0, 30, 20, 0, 20, 0}  => 4     (30x^4 + 20x^3 + 20x)
     // e.g. {0, 0, 4, -7, 1}                => 2     (4x^2 -7x + 1)
@@ -499,7 +499,7 @@ public class Polynomial extends ArrayList<Integer> {
     // e.g. {0, 0, 0, -10, 0}               => 1     (-10x)
     // e.g. {0, 0, 0, 10}                   => 0     (10)
     // See test cases in PolynomialTest.java for more examples
-      degree=coeffsHighToLow.length-degreeOfPolynomialCoeffsLowToHigh()-1;
+     int  degree=coeffsHighToLow.length-degreeOfPolynomialCoeffsLowToHigh()-1;
 
       returnn degree ; /* @@@ STUB! */
 
