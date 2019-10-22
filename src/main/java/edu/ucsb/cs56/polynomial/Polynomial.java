@@ -10,7 +10,7 @@ import java.text.DecimalFormat;
 /** Polynomial represents a polynomial from algebra.
     e.g. 4x<sup>3</sup> + 3x<sup>2</sup> - 5x + 2
 
-   @author Fill In Your Name
+   @author Tahereh Mehrjerdy
 */
 
 public class Polynomial extends ArrayList<Integer> {
@@ -41,7 +41,7 @@ public class Polynomial extends ArrayList<Integer> {
    */
 
   public int getDegree() {
-    return 0; // STUB
+    return 2 ; // STUB
   }
 
   /**
@@ -81,7 +81,7 @@ public class Polynomial extends ArrayList<Integer> {
   from an array literal, the order of coefficients mirrors the
   way polynomials are typically written, from highest order
   term to lowest order term.  BUT the ArrayList uses a representation
-  where term i is the coefficient of the x<sup>i<sup> term, which is the OPPOSITE order.
+  where term i is the coefficient of the x<sup>i</sup> term, which is the OPPOSITE order.
   </p>
 
   <p>
@@ -124,7 +124,7 @@ public class Polynomial extends ArrayList<Integer> {
      </ul>
 
 
-     <table summary="each row shows a math representation of the polynomial in HTML followed by the string representation that should be returned by the toString method">
+     <table>
      <caption>Examples of String Representation of Polynomials</caption>
      <tr><th>Math notation</th><th>String Representation</th></tr>
      <tr><td>0</td><td>{@code 0}</td></tr>
@@ -140,14 +140,14 @@ public class Polynomial extends ArrayList<Integer> {
      @return string representation of Polynomial
    */
 
-  public String toString() {
+    /* public String toString() {
     String result = "stub";
 
-    // @@ TODO : write code here
+     @@ TODO : write code here
     
     return result;
 
-  }
+    }*/
 
 
   /**
@@ -217,7 +217,7 @@ public class Polynomial extends ArrayList<Integer> {
     // sign for x term    (-?)                            group(1)
     // coeff for x term       (\\d*)                      group(2)
     // x in x term                  x
-    // optional constant part        (               )?   group(3)
+   // optional constant part        (               )?   group(3)
     // sign for constant                ([+-])            group(4)
     // coeff for constant                      (\\d+)     group(5)
 

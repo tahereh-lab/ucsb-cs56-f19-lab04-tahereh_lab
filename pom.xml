@@ -34,7 +34,13 @@
     
     
   </dependencies>
-    
+  <!-- For use with github pages, to publish the site to the /docs subdirectory -->
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <url>file://${projest.basedir}/docs/</url>
+    </site>
+  </distributionManagement>
   <!-- Make jar file executable -->
   <build>
     <plugins>
@@ -42,9 +48,18 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.2</version>
+	
+	  
+	
+	  
+	
         <configuration>
           <archive>
             <manifest>
+<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+
+
+	      
               <!-- full package name of class with the main you want to run -->
               <mainClass>edu.ucsb.cs56.polynomial.Polynomial</mainClass>
             </manifest>

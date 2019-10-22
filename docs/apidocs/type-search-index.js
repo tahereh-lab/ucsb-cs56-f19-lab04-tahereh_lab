@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"edu.ucsb.cs56.polynomial","l":"Polynomial"}]
