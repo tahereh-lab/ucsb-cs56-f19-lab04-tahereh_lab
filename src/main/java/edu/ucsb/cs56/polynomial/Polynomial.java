@@ -502,7 +502,7 @@ public class Polynomial extends ArrayList<Integer> {
 
 
  int  degreeOfPolynomialCoeffsHighToLow=0;
-      for(int i=coeffsLowToHigh.length;i>0;i--){
+      for(int i=coeffsHigToLow.length;i>0;i--){
 	  if(coeffsLowToHigh[i]!=0)
 	      {
 		  degreeOfPolynomialCoeffsHighToLow=i;
