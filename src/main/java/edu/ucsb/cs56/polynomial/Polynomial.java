@@ -567,16 +567,31 @@ public class Polynomial extends ArrayList<Integer> {
 
   public Polynomial plus (Polynomial p) {
 
-Polynomial a = this;
-int N = Math.max(a.getDegree(), p.getDegree());
-        Polynomial c = new Polynomial(0, N);  
-        for (int i = 0; i <= a.getDegree(); i++) c.HighToLow[i] += a.highToLow[i];
-        for (int i = 0; i <= p.getDegree(); i++) c.highToLow[i] += p.highToLow[i];
-        for (int i = 0; i <= N; i++) if (c.highToLow[i] != 0) c.getDegree() = i;
-        return c;
+int thisDegree = this.getDegree();
+	int thatDegree = p.getDegree();
+
+	int numCoeffs = 
+	    (thisDegree > thatDegree)? thisDegree + 1 : thatDegree + 1;
+
+	int [] coeffs = new int[numCoeffs];
+
+	for (int i=0; i< numCoeffs ; i++) {
+	    coeffs[i] = 0;
+	}
+
+	for (int i=0; i<= thisDegree;i++) {
+	    coeffs[i] += this.get(i);
+	}
+	
+	for (int i=0; i<= thatDegree; i++) {
+	    coeffs[i] += p.get(i);
+	}
+	
+	int [] finalCoeffs = findHighestNonZeroAndInvert(coeffs);
+	
+	return new Polynomial (finalCoeffs);
+
     }
-
-
 
 
 
@@ -596,7 +611,43 @@ int N = Math.max(a.getDegree(), p.getDegree());
   */
 
   public Polynomial times (Polynomial p) {
-     return null; /* @@@ STUB ! */
+     /* @@@ STUB ! */
+
+int newDegree = this.getDegree() + p.getDegree();
+	
+	int [] newCoeffs = new int[newDegree+1];
+
+	for (int i=0; i<newCoeffs.length; i++)
+	    newCoeffs[i] = 0;
+
+	for (int i=this.getDegree(); i>=0; i--) {
+	    
+	    int thisCoeff = this.get(i);
+
+	    for (int j=p.getDegree(); j>=0; j--) {		
+		int thisTermPower = i+j;
+		newCoeffs[thisTermPower] += thisCoeff * p.get(j);
+	    } // j
+	} // i
+	
+	int [] finalCoeffs = findHighestNonZeroAndInvert(newCoeffs);
+	
+	return new Polynomial (finalCoeffs);
+
+	// return new Polynomial (new int [] {-42}); // @@@ STUB!
+    }
+
+
+
+
+
+
+
+
+
+
+
+      
   }
 
   /** return a new Polynomial which has as its value the
@@ -611,8 +662,23 @@ int N = Math.max(a.getDegree(), p.getDegree());
   public Polynomial minus (Polynomial p) {
       // HINT: Can you reuse code you already wrote for
       //   for plus and times?
-     return null; /* @@@ STUB ! */
-  }
+      /* @@@ STUB ! */
+
+Polynomial minusOne = new Polynomial(new int[] {-1});
+	
+	Polynomial negP = p.times(minusOne);
+
+	return this.plus(negP);
+    }
+
+
+
+
+
+
+
+      
+  
 
   /** Print Usage message for Polynomial main
    */
