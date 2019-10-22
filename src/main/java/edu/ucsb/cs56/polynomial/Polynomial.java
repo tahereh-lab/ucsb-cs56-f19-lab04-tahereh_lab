@@ -503,7 +503,7 @@ public class Polynomial extends ArrayList<Integer> {
 
  int  degreeOfPolynomialCoeffsHighToLow=0;
       for(int i=coeffsHighToLow.length;i>0;i--){
-	  if(coeffsHigToLow[i]!=0)
+	  if(coeffsHighToLow[i]!=0)
 	      {
 		  degreeOfPolynomialCoeffsHighToLow=i;
 	      }
@@ -563,7 +563,25 @@ public class Polynomial extends ArrayList<Integer> {
   */
 
   public Polynomial plus (Polynomial p) {
-     return null; /* @@@ STUB ! */
+
+Polynomial a = this;
+        int N = Math.max(a.degree, p.degree);
+        Polynomial c = new Polynomial(0, N);  
+        for (int i = 0; i <= a.degree; i++) c.coef[i] += a.coef[i];
+        for (int i = 0; i <= p.degree; i++) c.coef[i] += p.coef[i];
+        for (int i = 0; i <= N; i++) if (c.coef[i] != 0) c.degree = i;
+        return c;
+    }
+
+
+
+
+
+
+
+
+      
+     /* @@@ STUB ! */
   }
 
   /** return a new Polynomial which has as its value the
