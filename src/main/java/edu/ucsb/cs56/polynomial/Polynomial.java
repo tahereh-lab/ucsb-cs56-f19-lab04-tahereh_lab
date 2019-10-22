@@ -499,8 +499,9 @@ public class Polynomial extends ArrayList<Integer> {
     // e.g. {0, 0, 0, -10, 0}               => 1     (-10x)
     // e.g. {0, 0, 0, 10}                   => 0     (10)
     // See test cases in PolynomialTest.java for more examples
+      degree=coeffsHighToLow.length-degreeOfPolynomialCoeffsLowToHigh()-1;
 
-      return 0; /* @@@ STUB! */
+      returnn degree ; /* @@@ STUB! */
 
   }
 
