@@ -27,19 +27,29 @@ public class PolynomialTest
 
    */
 
- 
+public Polynomial plus(Polynomial P) {
+	int d;
+	d=this.D;
+	if(d<P.D) d=P.D;
+	Polynomial Q=new Polynomial();
+	Q.D=d;
+	for(int i=0;i<99;++i)
+	    Q.z[i]=Complex.plus(z[i],P.z[i]);
+	return(Q);
+    }
 
-  
- 
-  
 
-  
-  @Test
-  public void test_degreeOfPolynomialCoeffsLowToHigh_2() {
 
-    int [] coeffsLowToHigh = new int [] {0, -11, -12, 0, 0, 0};
-    assertEquals(2,Polynomial.degreeOfPolynomialCoeffsLowToHigh(coeffsLowToHigh));
-  }
+
+
+    
+  
+    /* @Test
+  public void test_degreeOfPolynomialCoeffsHighToLow_0c() {
+
+    int [] coeffsHighToLow = new int [] {0};
+    assertEquals(0,Polynomial.degreeOfPolynomialCoeffsHighToLow(coeffsHighToLow));
+    }*/
 }
 
-  
+ 
