@@ -634,19 +634,7 @@ int newDegree = this.getDegree() + p.getDegree();
 	
 	return new Polynomial (finalCoeffs);
 
-	// return new Polynomial (new int [] {-42}); // @@@ STUB!
-    }
-
-
-
-
-
-
-
-
-
-
-
+	// return new Polynomial (new int [] {-42}); // @@@ STU
       
   }
 
