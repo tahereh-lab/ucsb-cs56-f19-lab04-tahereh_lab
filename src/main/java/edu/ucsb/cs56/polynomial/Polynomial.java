@@ -565,7 +565,7 @@ String result = "";
   @return index of the highest degree non-zero term (if any, otherwise {@code 0})
   */
 
-                                                                       public static int degreeOfPolynomialCoeffsHighToLow(int [] coeffsHighToLow) {
+     public static int degreeOfPolynomialCoeffsHighToLow(int [] coeffsHighToLow) {
 
     // e.g. {0, 0, 0, 0, 30, 20, 0, 20, 0}  => 4     (30x^4 + 20x^3 + 20x)
     // e.g. {0, 0, 4, -7, 1}                => 2     (4x^2 -7x + 1)
@@ -575,14 +575,14 @@ String result = "";
     // See test cases in PolynomialTest.java for more examples
 
 
-									   /* for (int i=coeffsHighToLow.length  - 1; i>=0; i--) {
+									    for (int i=coeffsHighToLow.length  - 1; i>=0; i--) {
 	    if (coeffsHighToLow[i]!=0) {
 		return i;
 	    }
 	    
 	}
 	return 0;
-	}*/
+	}
 						   
 									  
        /* @@@ STUB! */
@@ -643,21 +643,21 @@ String result = "";
     lowest degree.   No leading zeros.
   */
 
-  public static int [] highToLow(int [] coeffsLowToHigh) {
+       //public static int [] highToLow(int [] coeffsLowToHigh) {
       /* @@@ STUB ! */
 
-      int highest = degreeOfPolynomialCoeffsHighToLow( coeffsLowToHigh);
+       //   int highest = degreeOfPolynomialCoeffsHighToLow( coeffsLowToHigh);
 	
-	int [] finalCoeffs = new int [highest+1];
+       //	int [] finalCoeffs = new int [highest+1];
 	
-	int j=0;
-	for (int i=highest; i>= 0; i--) {
-	    finalCoeffs[i] = coeffsLowToHigh[j];
-	    j++;
-	}
+       //	int j=0;
+	//	for (int i=highest; i>= 0; i--) {
+       //  finalCoeffs[i] = coeffsLowToHigh[j];
+       //   j++;
+       //	}
 	
-	return finalCoeffs;
-    }
+       //	return finalCoeffs;
+       //  }
 
     
   
