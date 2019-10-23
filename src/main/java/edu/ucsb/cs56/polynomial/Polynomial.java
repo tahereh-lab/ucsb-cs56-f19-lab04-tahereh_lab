@@ -611,7 +611,7 @@ String result = "";
 	
 	int j=0;
 	for (int i=highest; i>= 0; i--) {
-	    finalCoeffs[i] = coeffs[j];
+	    finalCoeffs[i] = coeffsHighToLow[j];
 	    j++;
 	}
 	
@@ -652,7 +652,7 @@ String result = "";
 	
 	int j=0;
 	for (int i=highest; i>= 0; i--) {
-	    finalCoeffs[i] = coeffs[j];
+	    finalCoeffs[i] = coeffsLowToHigh[j];
 	    j++;
 	}
 	
