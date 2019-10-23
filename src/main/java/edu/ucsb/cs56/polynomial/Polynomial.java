@@ -692,7 +692,7 @@ int thisDegree = this.getDegree();
 	    coeffs[i] += p.get(i);
 	}
 	
-	int [] finalCoeffs = highToLow(coeffsHighToLow);
+	int [] finalCoeffs = lowToHigh(coeffsHighToLow);
 	
 	return new Polynomial (finalCoeffs);
 
@@ -735,7 +735,7 @@ int newDegree = this.getDegree() + p.getDegree();
 	    } // j
 	} // i
 	
-	int [] finalCoeffs = highToLow(coeffsHighToLow);
+	int [] finalCoeffs = lowToHigh(coeffsHighToLow);
 	
 	return new Polynomial (finalCoeffs);
 
