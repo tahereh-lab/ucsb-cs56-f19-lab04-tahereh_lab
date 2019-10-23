@@ -681,15 +681,15 @@ int thisDegree = this.getDegree();
 	int [] coeffsHighToLow = new int[numCoeffs];
 
 	for (int i=0; i< numCoeffs ; i++) {
-	    coeffs[i] = 0;
+	    coeffsHighToLow[i] = 0;
 	}
 
 	for (int i=0; i<= thisDegree;i++) {
-	    coeffs[i] += this.get(i);
+	    coeffsHighToLow[i] += this.get(i);
 	}
 	
 	for (int i=0; i<= thatDegree; i++) {
-	    coeffs[i] += p.get(i);
+	    coeffsHighToLow[i] += p.get(i);
 	}
 	
 	int [] finalCoeffs = lowToHigh(coeffsHighToLow);
