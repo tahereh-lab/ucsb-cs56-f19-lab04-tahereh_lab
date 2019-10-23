@@ -535,12 +535,12 @@ String result = "";
 
 
       */
-      /*  for (int i=0; i<coeffsLowToHigh.length-1 ; i++) {
+       for (int i=0; i<coeffsLowToHigh.length-1 ; i++) {
 	    if (coeffsLowToHigh[i]!=0) {
 		return i;
 	    }
 	    
-	    }*/
+	    }
 	return 0;
     }
 
@@ -575,14 +575,14 @@ String result = "";
     // See test cases in PolynomialTest.java for more examples
 
 
- for (int i=coeffsHighToLow.length  - 1; i>=0; i--) {
+									   /* for (int i=coeffsHighToLow.length  - 1; i>=0; i--) {
 	    if (coeffsHighToLow[i]!=0) {
 		return i;
 	    }
 	    
 	}
 	return 0;
-    }
+	}*/
 						   
 									  
        /* @@@ STUB! */
