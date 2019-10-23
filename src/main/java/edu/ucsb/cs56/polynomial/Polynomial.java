@@ -143,14 +143,88 @@ public class Polynomial extends ArrayList<Integer> {
      @return string representation of Polynomial
    */
 
-    /* public String toString() {
-    String result = "stub";
+     public String toString() {
+    
 
      @@ TODO : write code here
-    
-    return result;
 
-    }*/
+String result = "";
+
+	DecimalFormat df = new DecimalFormat("#");
+
+	// check for special case of degree 0
+
+	if (this.getDegree() == 0) {
+	    return df.format(this.get(0));	    
+	}
+	
+	// Make the first term
+
+       
+	int firstTerm = (this.get(this.getDegree()));
+
+	// if first term is negative put the minus sign on
+
+	if (firstTerm < 0) {
+	    result += "-";
+	}
+
+	// put on the first coeff, supressing 1's 
+
+	if (Math.abs(firstTerm) != 1) {
+	    result += df.format(Math.abs(firstTerm));
+	}
+	
+	result +="x";
+
+	if (this.getDegree() > 1) {
+	    result += "^" + this.getDegree();
+	}
+
+	// append rest of terms
+
+	for (int i=this.getDegree() - 1; i>=0; i--) {
+
+	    // if this coeff is zero, supress it
+
+	    if (this.get(i)==0) {
+		    continue;
+	    }
+	    
+	    // put on the sign
+
+	    result += (this.get(i) < 0) ? " - " : " + ";
+
+	    // put on the first coeff, supressing 1's 
+	    
+	    if (Math.abs(this.get(i))!=1) {
+		result += df.format(Math.abs(this.get(i)));
+	    }
+
+	    if (i>=2) {
+		result += "x" + "^" + i;
+	    } else if (i==1) {
+		result += "x";
+	    }; // else i==0 and we do nothing. :-)
+
+	}
+
+	return result;
+
+    }
+
+
+
+
+
+
+
+
+
+	     
+    
+
+    
 
 
   /**
