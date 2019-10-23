@@ -539,9 +539,7 @@ String result = "";
 	    if (coeffsLowToHigh[i]!=0) {
 		return i;
 	    }
-	    
-	    }
-	return 0;
+	   
     }
 
 
