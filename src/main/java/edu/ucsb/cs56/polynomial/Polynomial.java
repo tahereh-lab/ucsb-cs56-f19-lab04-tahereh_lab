@@ -578,18 +578,15 @@ String result = "";
     // See test cases in PolynomialTest.java for more examples
 
 
- int  degreeOfPolynomialCoeffsHighToLow=0;
-      for(int i=coeffsHighToLow.length;i>0;i--){
-	  if(coeffsHighToLow[i]!=0)
-	      {
-		  degreeOfPolynomialCoeffsHighToLow=i;
-	      }
-      }
- return degreeOfPolynomialCoeffsHighToLow;
-      
-      
-  }
-									   
+ for (int i=coeffs.length  - 1; i>=0; i--) {
+	    if (coeffs[i]!=0) {
+		return i;
+	    }
+	    
+	}
+	return 0;
+    }
+						   
 									  
        /* @@@ STUB! */
 
