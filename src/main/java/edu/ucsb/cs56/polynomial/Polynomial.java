@@ -535,17 +535,14 @@ String result = "";
 
 
       */
-      int  degreeOfPolynomialCoeffsLowToHigh=0;
-      for(int i=0;i<coeffsLowToHigh.length;i++){
-	  if(coeffsLowToHigh[i]!=0)
-	      {
-		  degreeOfPolynomialCoeffsLowToHigh=i;
-	      }
-      }
- return  degreeOfPolynomialCoeffsLowToHigh;
-      
-      
-  }
+     for (int i=0; i<coeffsLowToHigh.length ; i++) {
+	    if (coeffsLowToHigh[i]!=0) {
+		return i;
+	    }
+	    
+	}
+	return 0;
+    }
 
 
   /**
@@ -578,8 +575,8 @@ String result = "";
     // See test cases in PolynomialTest.java for more examples
 
 
- for (int i=coeffs.length  - 1; i>=0; i--) {
-	    if (coeffs[i]!=0) {
+ for (int i=coeffsHighToLow.length  - 1; i>=0; i--) {
+	    if (coeffsHighToLow[i]!=0) {
 		return i;
 	    }
 	    
@@ -606,10 +603,32 @@ String result = "";
   coefficients in order from lowest degree to highest degree.   No trailing zeros.
   */
 
-  public static int [] lowToHigh(int [] coeffsHighToLow) {
+       public static int [] lowToHigh(int [] coeffsHighToLow) {
 
-      return null; /* @@@ STUB ! */
-  }
+	   int highest = degreeOfPolynomialCoeffsLowToHigh(coeffsLowToHigh);
+	
+	int [] finalCoeffs = new int [highest+1];
+	
+	int j=0;
+	for (int i=highest; i>= 0; i--) {
+	    finalCoeffs[i] = coeffs[j];
+	    j++;
+	}
+	
+	return finalCoeffs;
+    }
+
+									       
+
+
+
+
+
+
+									       
+
+       /* @@@ STUB ! */
+  
 
 
   /** Convert a list of coefficients in order from
@@ -625,8 +644,30 @@ String result = "";
   */
 
   public static int [] highToLow(int [] coeffsLowToHigh) {
-     return null; /* @@@ STUB ! */
-  }
+      /* @@@ STUB ! */
+
+      int highest = degreeOfPolynomialCoeffsHighToLow(coeffsHighToLow);
+	
+	int [] finalCoeffs = new int [highest+1];
+	
+	int j=0;
+	for (int i=highest; i>= 0; i--) {
+	    finalCoeffs[i] = coeffs[j];
+	    j++;
+	}
+	
+	return finalCoeffs;
+    }
+
+
+
+
+
+
+
+
+      
+  
 
   /** return a new Polynomial which has as its value the
   this polynomial plus the one passed in as a parameter.
@@ -658,7 +699,7 @@ int thisDegree = this.getDegree();
 	    coeffs[i] += p.get(i);
 	}
 	
-	int [] finalCoeffs = findHighestNonZeroAndInvert(coeffs);
+	int [] finalCoeffs = highToLow(coeffsLowToHigh);
 	
 	return new Polynomial (finalCoeffs);
 
@@ -701,7 +742,7 @@ int newDegree = this.getDegree() + p.getDegree();
 	    } // j
 	} // i
 	
-	int [] finalCoeffs = findHighestNonZeroAndInvert(newCoeffs);
+	int [] finalCoeffs = highToLow(coeffsLowToHigh);
 	
 	return new Polynomial (finalCoeffs);
 
