@@ -678,7 +678,7 @@ int thisDegree = this.getDegree();
 	int numCoeffs = 
 	    (thisDegree > thatDegree)? thisDegree + 1 : thatDegree + 1;
 
-	int [] coeffs = new int[numCoeffs];
+	int [] coeffsHighToLow = new int[numCoeffs];
 
 	for (int i=0; i< numCoeffs ; i++) {
 	    coeffs[i] = 0;
@@ -735,7 +735,7 @@ int newDegree = this.getDegree() + p.getDegree();
 	    } // j
 	} // i
 	
-	int [] finalCoeffs = lowToHigh(coeffsHighToLow);
+	int [] finalCoeffs = lowToHigh(newCoeffs);
 	
 	return new Polynomial (finalCoeffs);
 
