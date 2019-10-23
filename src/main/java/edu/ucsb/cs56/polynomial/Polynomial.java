@@ -605,7 +605,7 @@ String result = "";
 
        public static int [] lowToHigh(int [] coeffsHighToLow) {
 
-	   int highest = degreeOfPolynomialCoeffsLowToHigh(coeffsLowToHigh);
+	   int highest = degreeOfPolynomialCoeffsLowToHigh(coeffsHighToLow);
 	
 	int [] finalCoeffs = new int [highest+1];
 	
@@ -646,7 +646,7 @@ String result = "";
   public static int [] highToLow(int [] coeffsLowToHigh) {
       /* @@@ STUB ! */
 
-      int highest = degreeOfPolynomialCoeffsHighToLow(coeffsHighToLow);
+      int highest = degreeOfPolynomialCoeffsHighToLow( coeffsLowToHigh);
 	
 	int [] finalCoeffs = new int [highest+1];
 	
@@ -659,14 +659,7 @@ String result = "";
 	return finalCoeffs;
     }
 
-
-
-
-
-
-
-
-      
+    
   
 
   /** return a new Polynomial which has as its value the
