@@ -537,8 +537,10 @@ String result = "";
       */
        for (int i=0; i<coeffsLowToHigh.length-1 ; i++) {
 	    if (coeffsLowToHigh[i]!=0) {
-		return i;
+	
 	    }
+       }
+       return i;
 	   
     }
 
